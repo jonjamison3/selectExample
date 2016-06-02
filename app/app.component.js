@@ -12,12 +12,16 @@ var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
     }
+    AppComponent.prototype.changeFunction = function () {
+        console.log("here is a message including " + this.testResult);
+    };
     AppComponent.prototype.ngOnInit = function () {
         console.log("here is a message");
     };
     ;
     AppComponent.prototype._constructor = function () {
         this.testResult = "";
+        return function () { return console.log("Let the games begin"); };
     };
     ;
     AppComponent = __decorate([
